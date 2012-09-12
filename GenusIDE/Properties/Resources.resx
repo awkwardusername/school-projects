@@ -190,4 +190,8 @@
   <data name="GenusIDE_Stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GenusIDE-Stop.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="File Types">
+    <value xml:space="preserve">MOE (*.moe)|*.moe|Okashi (*oks)|*.oks|C/C++ (*.c, *.cpp, *.cxx, *.h, *.hxx)|*.c;*.cpp;*.cxx;*.h;*.hxx|C# (*.cs)|*.cs|Java (*.java)|*.java|PHP (*.php)|*.php|HTML (*.html, *.htm)|*.html;*.htm|Text (*.txt)|*.txt|All Files|*.*</value>
+    <comment>File types recognized in GenusIDE</comment>
+  </data>
 </root>

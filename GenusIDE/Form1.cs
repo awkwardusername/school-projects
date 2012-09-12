@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GenusIDE.Properties;
 
 namespace GenusIDE {
     public partial class GenusIDE : Form {
@@ -18,23 +19,29 @@ namespace GenusIDE {
 
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void OpenToolStripMenuItemClick(object sender, EventArgs e) {
             FileDialog dialog = new OpenFileDialog();
             dialog.Title = "Open file...";
-
+            dialog.Filter = Resources.File_Types;
             dialog.ShowDialog();
 
             {
-                String[] temp = dialog.FileName.Split('\\');
-                tabPage1.Text = temp.Last();
+                var temp = dialog.FileName.Split('\\');
+
+                var newtabPage = new TabPage(temp.Last());
+                tabControl1.TabPages.Add(newtabPage);
+
                 saveToolStripMenuItem.Text = "S&ave " + temp.Last();
+                closetoolStripMenuItem3.Text = "&Close" + temp.Last();
+
+                toolStripStatusLabel1.Text = temp.Last() + " opened.";
             }
 
             this.Text = "GenusIDE - " + dialog.FileName;
             
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void ExitToolStripMenuItemClick(object sender, EventArgs e) {
             this.Dispose();
         }
     }

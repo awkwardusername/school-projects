@@ -61,6 +61,15 @@ namespace GenusIDE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MOE (*.moe)|*.moe|Okashi (*oks)|*.oks|C/C++ (*.c, *.cpp, *.cxx, *.h, *.hxx)|*.c;*.cpp;*.cxx;*.h;*.hxx|C# (*.cs)|*.cs|Java (*.java)|*.java|PHP (*.php)|*.php|HTML (*.html, *.htm)|*.html;*.htm|Text (*.txt)|*.txt|All Files|*.*.
+        /// </summary>
+        internal static string File_Types {
+            get {
+                return ResourceManager.GetString("File Types", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon GenueIDE_Okashi {
