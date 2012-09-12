@@ -1,4 +1,4 @@
-GenusIDE
+GenusIDE - a generic IDE
 
 An Integrated Development Environment for C, C++, C#, Java, PHP, HTML, Okashi, 
 MOE, and any other programming language (as long as you configure it to do so) 
@@ -20,6 +20,9 @@ Requires:
 	- Windows XP SP3+
 	- 512 MB RAM (erm, recommended but it is .NET's requirements)
 	- 1GHz CPU (it runs on netbooks!)
+	
+By: Mark Jayson Fuentes <awkwardusername AT gmail.com>
+	Polytechnic University of the Philippines
 
 Thanks to Garrett Serack for ScintillaNET and of course, Neil Hodgson for 
 Scintilla itself.
