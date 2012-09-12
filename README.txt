@@ -1,0 +1,29 @@
+GenusIDE
+
+An Integrated Development Environment for C, C++, C#, Java, PHP, HTML, Okashi, 
+MOE, and any other programming language (as long as you configure it to do so) 
+without the annoyances of fancy scrollbars, fancy UI, sparkling methods and 
+functions, automagical refactoring, and splash screens.
+
+Has the following features:
+	- syntax (friggin) highlighting
+	- code (friggin) completion
+	- tabbed (friggin) pages
+	- instant (friggin) compiler integration [with C, C++, C#, Okashi, MOE, and Java]
+	- (friggin) hotkeys for almost everything
+	- code (friggin) color printing
+	- configurable syntax schemes and code completion features
+	- lightweight (srsly!)!
+	
+Requires:
+	- .NET Framework 4
+	- Windows XP SP3+
+	- 512 MB RAM (erm, recommended but it is .NET's requirements)
+	- 1GHz CPU (it runs on netbooks!)
+
+Thanks to Garrett Serack for ScintillaNET and of course, Neil Hodgson for 
+Scintilla itself.
+
+		   
+		   
+		   
