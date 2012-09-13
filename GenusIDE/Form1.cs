@@ -29,7 +29,7 @@ namespace GenusIDE {
                 var temp = dialog.FileName.Split('\\');
 
                 var newtabPage = new TabPage(temp.Last());
-                tabControl1.TabPages.Add(newtabPage);
+                //tabControl1.TabPages.Add(newtabPage);
 
                 saveToolStripMenuItem.Text = "S&ave " + temp.Last();
                 closetoolStripMenuItem3.Text = "&Close" + temp.Last();

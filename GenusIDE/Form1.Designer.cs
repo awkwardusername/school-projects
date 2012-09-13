@@ -77,12 +77,12 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.statusTextBox = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.savetoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.closetoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.closealltoolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusTextBox = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -146,6 +146,7 @@
             // 
             // emptyTextFileToolStripMenuItem
             // 
+            this.emptyTextFileToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_New1;
             this.emptyTextFileToolStripMenuItem.Name = "emptyTextFileToolStripMenuItem";
             this.emptyTextFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.emptyTextFileToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
@@ -158,12 +159,14 @@
             // 
             // mOESourceFileToolStripMenuItem
             // 
+            this.mOESourceFileToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_MOE1;
             this.mOESourceFileToolStripMenuItem.Name = "mOESourceFileToolStripMenuItem";
             this.mOESourceFileToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.mOESourceFileToolStripMenuItem.Text = "MOE Source File";
             // 
             // okashiSourceFileToolStripMenuItem
             // 
+            this.okashiSourceFileToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenueIDE_Okashi1;
             this.okashiSourceFileToolStripMenuItem.Name = "okashiSourceFileToolStripMenuItem";
             this.okashiSourceFileToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.okashiSourceFileToolStripMenuItem.Text = "Okashi Source File";
@@ -175,42 +178,49 @@
             // 
             // cCSourceFileToolStripMenuItem
             // 
+            this.cCSourceFileToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_C1;
             this.cCSourceFileToolStripMenuItem.Name = "cCSourceFileToolStripMenuItem";
             this.cCSourceFileToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.cCSourceFileToolStripMenuItem.Text = "C Source File";
             // 
             // cSourceFileToolStripMenuItem
             // 
+            this.cSourceFileToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_CPP1;
             this.cSourceFileToolStripMenuItem.Name = "cSourceFileToolStripMenuItem";
             this.cSourceFileToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.cSourceFileToolStripMenuItem.Text = "C++ Source File";
             // 
             // cSourceFileToolStripMenuItem1
             // 
+            this.cSourceFileToolStripMenuItem1.Image = global::GenusIDE.Properties.Resources.GenusIDE_CSharp1;
             this.cSourceFileToolStripMenuItem1.Name = "cSourceFileToolStripMenuItem1";
             this.cSourceFileToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
             this.cSourceFileToolStripMenuItem1.Text = "C# Source File";
             // 
             // pHPSourceFileToolStripMenuItem
             // 
+            this.pHPSourceFileToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_PHP1;
             this.pHPSourceFileToolStripMenuItem.Name = "pHPSourceFileToolStripMenuItem";
             this.pHPSourceFileToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.pHPSourceFileToolStripMenuItem.Text = "PHP Source File";
             // 
             // hTMLSourceFileToolStripMenuItem
             // 
+            this.hTMLSourceFileToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_HTML1;
             this.hTMLSourceFileToolStripMenuItem.Name = "hTMLSourceFileToolStripMenuItem";
             this.hTMLSourceFileToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.hTMLSourceFileToolStripMenuItem.Text = "HTML Source File";
             // 
             // javaSourceFileToolStripMenuItem
             // 
+            this.javaSourceFileToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Java1;
             this.javaSourceFileToolStripMenuItem.Name = "javaSourceFileToolStripMenuItem";
             this.javaSourceFileToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.javaSourceFileToolStripMenuItem.Text = "Java Source File";
             // 
             // openToolStripMenuItem
             // 
+            this.openToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Open1;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.openToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
@@ -237,6 +247,7 @@
             // 
             // saveToolStripMenuItem
             // 
+            this.saveToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Save1;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
@@ -244,6 +255,7 @@
             // 
             // saveAsToolStripMenuItem
             // 
+            this.saveAsToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_SaveAs1;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             this.saveAsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F12;
             this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
@@ -264,6 +276,7 @@
             // 
             // printToolStripMenuItem
             // 
+            this.printToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Print1;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
@@ -297,6 +310,7 @@
             // 
             // findToolStripMenuItem
             // 
+            this.findToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Find1;
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             this.findToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.findToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
@@ -324,12 +338,14 @@
             // 
             // mOEToolStripMenuItem
             // 
+            this.mOEToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_MOE1;
             this.mOEToolStripMenuItem.Name = "mOEToolStripMenuItem";
             this.mOEToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.mOEToolStripMenuItem.Text = "MOE";
             // 
             // okashiToolStripMenuItem
             // 
+            this.okashiToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenueIDE_Okashi1;
             this.okashiToolStripMenuItem.Name = "okashiToolStripMenuItem";
             this.okashiToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.okashiToolStripMenuItem.Text = "Okashi";
@@ -341,6 +357,7 @@
             // 
             // cToolStripMenuItem
             // 
+            this.cToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_CPP1;
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
             this.cToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.cToolStripMenuItem.Text = "C/C++";
@@ -348,24 +365,28 @@
             // 
             // cToolStripMenuItem1
             // 
+            this.cToolStripMenuItem1.Image = global::GenusIDE.Properties.Resources.GenusIDE_CSharp1;
             this.cToolStripMenuItem1.Name = "cToolStripMenuItem1";
             this.cToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
             this.cToolStripMenuItem1.Text = "C#";
             // 
             // pHPToolStripMenuItem
             // 
+            this.pHPToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_PHP1;
             this.pHPToolStripMenuItem.Name = "pHPToolStripMenuItem";
             this.pHPToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.pHPToolStripMenuItem.Text = "PHP";
             // 
             // hTMLToolStripMenuItem
             // 
+            this.hTMLToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_HTML1;
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
             this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.hTMLToolStripMenuItem.Text = "HTML";
             // 
             // javaToolStripMenuItem
             // 
+            this.javaToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Java1;
             this.javaToolStripMenuItem.Name = "javaToolStripMenuItem";
             this.javaToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.javaToolStripMenuItem.Text = "Java";
@@ -377,6 +398,7 @@
             // 
             // preferencesToolStripMenuItem1
             // 
+            this.preferencesToolStripMenuItem1.Image = global::GenusIDE.Properties.Resources.GenusIDE_Settings1;
             this.preferencesToolStripMenuItem1.Name = "preferencesToolStripMenuItem1";
             this.preferencesToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.preferencesToolStripMenuItem1.Text = "P&references";
@@ -395,6 +417,7 @@
             // 
             // compileToolStripMenuItem
             // 
+            this.compileToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Compile1;
             this.compileToolStripMenuItem.Name = "compileToolStripMenuItem";
             this.compileToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F8;
             this.compileToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
@@ -402,6 +425,7 @@
             // 
             // runToolStripMenuItem
             // 
+            this.runToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Run1;
             this.runToolStripMenuItem.Name = "runToolStripMenuItem";
             this.runToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9;
             this.runToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
@@ -414,6 +438,7 @@
             // 
             // compileRunToolStripMenuItem
             // 
+            this.compileRunToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_CompileAndRun1;
             this.compileRunToolStripMenuItem.Name = "compileRunToolStripMenuItem";
             this.compileRunToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
             this.compileRunToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
@@ -432,6 +457,7 @@
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Help1;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
@@ -439,6 +465,7 @@
             // 
             // hotkeysToolStripMenuItem
             // 
+            this.hotkeysToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Hotkeys1;
             this.hotkeysToolStripMenuItem.Name = "hotkeysToolStripMenuItem";
             this.hotkeysToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
             this.hotkeysToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
@@ -489,6 +516,17 @@
             this.splitContainer1.SplitterDistance = 295;
             this.splitContainer1.TabIndex = 5;
             // 
+            // statusTextBox
+            // 
+            this.statusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.statusTextBox.Location = new System.Drawing.Point(0, -1);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(515, 85);
+            this.statusTextBox.TabIndex = 0;
+            this.statusTextBox.Text = "";
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -530,17 +568,6 @@
             this.closealltoolStripMenuItem4.Size = new System.Drawing.Size(170, 22);
             this.closealltoolStripMenuItem4.Text = "Close All Except This";
             // 
-            // statusTextBox
-            // 
-            this.statusTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.statusTextBox.Location = new System.Drawing.Point(0, -1);
-            this.statusTextBox.Name = "statusTextBox";
-            this.statusTextBox.Size = new System.Drawing.Size(515, 85);
-            this.statusTextBox.TabIndex = 0;
-            this.statusTextBox.Text = "";
-            // 
             // GenusIDE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,7 +577,6 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(500, 400);

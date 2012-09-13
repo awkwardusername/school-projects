@@ -88,20 +88,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TabScintilla.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,30 +118,54 @@
   <ItemGroup>
     <Content Include="GenusIDE-Main.ico" />
     <Content Include="Library\WeifenLuo.WinFormsUI.Docking.dll" />
-    <Content Include="Resources\GenueIDE-Okashi.ico" />
-    <Content Include="Resources\GenusIDE-C.ico" />
-    <Content Include="Resources\GenusIDE-Compile.ico" />
-    <Content Include="Resources\GenusIDE-CompileAndRun.ico" />
-    <Content Include="Resources\GenusIDE-CPP.ico" />
-    <Content Include="Resources\GenusIDE-CSharp.ico" />
-    <Content Include="Resources\GenusIDE-EmptyFile.ico" />
-    <Content Include="Resources\GenusIDE-Find.ico" />
-    <Content Include="Resources\GenusIDE-Help.ico" />
-    <Content Include="Resources\GenusIDE-Hotkeys.ico" />
-    <Content Include="Resources\GenusIDE-HTML.ico" />
-    <Content Include="Resources\GenusIDE-Java.ico" />
-    <Content Include="Resources\GenusIDE-Main.ico" />
-    <Content Include="Resources\GenusIDE-MOE.ico" />
-    <Content Include="Resources\GenusIDE-New.ico" />
-    <Content Include="Resources\GenusIDE-Open.ico" />
-    <Content Include="Resources\GenusIDE-Pause.ico" />
-    <Content Include="Resources\GenusIDE-PHP.ico" />
-    <Content Include="Resources\GenusIDE-Print.ico" />
-    <Content Include="Resources\GenusIDE-Run.ico" />
-    <Content Include="Resources\GenusIDE-Save.ico" />
-    <Content Include="Resources\GenusIDE-SaveAs.ico" />
-    <Content Include="Resources\GenusIDE-Settings.ico" />
-    <Content Include="Resources\GenusIDE-Stop.ico" />
+    <Content Include="Resources\Icons\GenueIDE-Okashi.ico" />
+    <None Include="Resources\Images\GenusIDE-Stop.png" />
+    <None Include="Resources\Images\GenueIDE-Okashi.png" />
+    <Content Include="Resources\Icons\GenusIDE-C.ico" />
+    <None Include="Resources\Images\GenusIDE-C.png" />
+    <Content Include="Resources\Icons\GenusIDE-Compile.ico" />
+    <None Include="Resources\Images\GenusIDE-Compile.png" />
+    <Content Include="Resources\Icons\GenusIDE-CompileAndRun.ico" />
+    <None Include="Resources\Images\GenusIDE-CompileAndRun.png" />
+    <Content Include="Resources\Icons\GenusIDE-CPP.ico" />
+    <None Include="Resources\Images\GenusIDE-CPP.png" />
+    <Content Include="Resources\Icons\GenusIDE-CSharp.ico" />
+    <None Include="Resources\Images\GenusIDE-CSharp.png" />
+    <Content Include="Resources\Icons\GenusIDE-EmptyFile.ico" />
+    <None Include="Resources\Images\GenusIDE-EmptyFile.png" />
+    <Content Include="Resources\Icons\GenusIDE-Find.ico" />
+    <None Include="Resources\Images\GenusIDE-Find.png" />
+    <Content Include="Resources\Icons\GenusIDE-Help.ico" />
+    <None Include="Resources\Images\GenusIDE-Help.png" />
+    <Content Include="Resources\Icons\GenusIDE-Hotkeys.ico" />
+    <None Include="Resources\Images\GenusIDE-Hotkeys.png" />
+    <Content Include="Resources\Icons\GenusIDE-HTML.ico" />
+    <None Include="Resources\Images\GenusIDE-HTML.png" />
+    <Content Include="Resources\Icons\GenusIDE-Java.ico" />
+    <None Include="Resources\Images\GenusIDE-Java.png" />
+    <Content Include="Resources\Icons\GenusIDE-Main.ico" />
+    <None Include="Resources\Images\GenusIDE-Main.png" />
+    <Content Include="Resources\Icons\GenusIDE-MOE.ico" />
+    <None Include="Resources\Images\GenusIDE-MOE.png" />
+    <Content Include="Resources\Icons\GenusIDE-New.ico" />
+    <None Include="Resources\Images\GenusIDE-New.png" />
+    <Content Include="Resources\Icons\GenusIDE-Open.ico" />
+    <None Include="Resources\Images\GenusIDE-Open.png" />
+    <Content Include="Resources\Icons\GenusIDE-Pause.ico" />
+    <None Include="Resources\Images\GenusIDE-Pause.png" />
+    <Content Include="Resources\Icons\GenusIDE-PHP.ico" />
+    <None Include="Resources\Images\GenusIDE-PHP.png" />
+    <Content Include="Resources\Icons\GenusIDE-Print.ico" />
+    <None Include="Resources\Images\GenusIDE-Print.png" />
+    <Content Include="Resources\Icons\GenusIDE-Run.ico" />
+    <None Include="Resources\Images\GenusIDE-Run.png" />
+    <Content Include="Resources\Icons\GenusIDE-Save.ico" />
+    <None Include="Resources\Images\GenusIDE-Save.png" />
+    <Content Include="Resources\Icons\GenusIDE-SaveAs.ico" />
+    <None Include="Resources\Images\GenusIDE-SaveAs.png" />
+    <Content Include="Resources\Icons\GenusIDE-Settings.ico" />
+    <None Include="Resources\Images\GenusIDE-Settings.png" />
+    <Content Include="Resources\Icons\GenusIDE-Stop.ico" />
     <Content Include="Library\SciLexer.dll" />
     <Content Include="Library\SciLexer64.dll" />
     <Content Include="Library\ScintillaNET.dll" />
