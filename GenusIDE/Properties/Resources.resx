@@ -122,9 +122,6 @@
     <comment>File types recognized in GenusIDE</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GenueIDE_Okashi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\GenueIDE-Okashi.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="GenueIDE_Okashi1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\GenueIDE-Okashi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -265,5 +262,80 @@
   </data>
   <data name="GenusIDE_Stop1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\GenusIDE-Stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_CompileAndRun_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-CompileAndRun_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Compile_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Compile_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_CPP_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-CPP_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_CSharp_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-CSharp_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_C_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-C_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_EmptyFile_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-EmptyFile_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Find_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Find_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Help_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Help_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Hotkeys_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Hotkeys_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_HTML_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-HTML_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Java_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Java_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Main_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Main_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_MOE_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-MOE_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_New_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-New_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Okashi_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Okashi_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Open_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Open_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Pause_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Pause_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_PHP_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-PHP_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Print_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Print_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Run_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Run_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_SaveAs_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-SaveAs_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Save_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Save_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Settings_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Settings_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Stop_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\GenusIDE-Stop_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenusIDE_Okashi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\GenusIDE-Okashi.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

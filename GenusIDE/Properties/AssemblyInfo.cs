@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MOE Dev")]
 [assembly: AssemblyProduct("GenusIDE")]
-[assembly: AssemblyCopyright("Licensed under GPL!!")]
+[assembly: AssemblyCopyright("Copyright © 2012 Mark Jayson Fuentes")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

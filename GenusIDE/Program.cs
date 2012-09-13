@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace GenusIDE {
     static class Program {
+        public static string Title = "GenusIDE";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

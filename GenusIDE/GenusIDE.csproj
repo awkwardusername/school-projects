@@ -12,7 +12,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>Z:\Public\Documents\GenusIDE-Icons\GenusIDE Deploy\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -53,8 +55,32 @@
   <PropertyGroup>
     <ApplicationIcon>GenusIDE-Main.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5BC67DC2C2B9EEAFAF0EE425BF0DB8ED7C2778C9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>GenusIDE_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -80,12 +106,17 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentForm.Designer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IniLexer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -94,6 +125,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TabScintilla.cs" />
+    <EmbeddedResource Include="DocumentForm.resx" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +134,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="GenusIDE_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,8 +151,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GenusIDE-Main.ico" />
+    <Content Include="GenusIDE-Okashi.ico" />
     <Content Include="Library\WeifenLuo.WinFormsUI.Docking.dll" />
     <Content Include="Resources\Icons\GenueIDE-Okashi.ico" />
+    <None Include="Resources\Images\GenusIDE-Stop_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Settings_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Save_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-SaveAs_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Run_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Print_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-PHP_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Pause_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Open_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Okashi_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-New_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-MOE_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Main_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Java_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-HTML_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Hotkeys_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Help_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Find_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-EmptyFile_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-CSharp_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-CPP_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-CompileAndRun_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-Compile_16x16.png" />
+    <None Include="Resources\Images\GenusIDE-C_16x16.png" />
     <None Include="Resources\Images\GenusIDE-Stop.png" />
     <None Include="Resources\Images\GenueIDE-Okashi.png" />
     <Content Include="Resources\Icons\GenusIDE-C.ico" />
@@ -149,6 +208,7 @@
     <None Include="Resources\Images\GenusIDE-MOE.png" />
     <Content Include="Resources\Icons\GenusIDE-New.ico" />
     <None Include="Resources\Images\GenusIDE-New.png" />
+    <None Include="Resources\Icons\GenusIDE-Okashi.ico" />
     <Content Include="Resources\Icons\GenusIDE-Open.ico" />
     <None Include="Resources\Images\GenusIDE-Open.png" />
     <Content Include="Resources\Icons\GenusIDE-Pause.ico" />
@@ -191,6 +251,56 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".c">
+      <Visible>False</Visible>
+      <Description>C Source File</Description>
+      <Progid>2</Progid>
+      <DefaultIcon>Resources\Icons\GenusIDE-C.ico</DefaultIcon>
+    </FileAssociation>
+    <FileAssociation Include=".cpp">
+      <Visible>False</Visible>
+      <Description>C++ Source File</Description>
+      <Progid>3</Progid>
+      <DefaultIcon>Resources\Icons\GenusIDE-CPP.ico</DefaultIcon>
+    </FileAssociation>
+    <FileAssociation Include=".htm">
+      <Visible>False</Visible>
+      <Description>HTML Source File</Description>
+      <Progid>6</Progid>
+      <DefaultIcon>Resources\Icons\GenusIDE-HTML.ico</DefaultIcon>
+    </FileAssociation>
+    <FileAssociation Include=".java">
+      <Visible>False</Visible>
+      <Description>Java Source File</Description>
+      <Progid>4</Progid>
+      <DefaultIcon>Resources\Icons\GenusIDE-Java.ico</DefaultIcon>
+    </FileAssociation>
+    <FileAssociation Include=".moe">
+      <Visible>False</Visible>
+      <Description>MOE Source File</Description>
+      <Progid>7</Progid>
+      <DefaultIcon>Resources\Icons\GenusIDE-MOE.ico</DefaultIcon>
+    </FileAssociation>
+    <FileAssociation Include=".oks">
+      <Visible>False</Visible>
+      <Description>Okashi Source File</Description>
+      <Progid>8</Progid>
+      <DefaultIcon>Resources\Icons\GenusIDE-Okashi.ico</DefaultIcon>
+    </FileAssociation>
+    <FileAssociation Include=".php">
+      <Visible>False</Visible>
+      <Description>PHP Source File</Description>
+      <Progid>5</Progid>
+      <DefaultIcon>Resources\Icons\GenusIDE-PHP.ico</DefaultIcon>
+    </FileAssociation>
+    <FileAssociation Include=".txt">
+      <Visible>False</Visible>
+      <Description>Text File</Description>
+      <Progid>1</Progid>
+      <DefaultIcon>Resources\Icons\GenusIDE-EmptyFile.ico</DefaultIcon>
+    </FileAssociation>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

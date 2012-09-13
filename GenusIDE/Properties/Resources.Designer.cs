@@ -70,16 +70,6 @@ namespace GenusIDE.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon GenueIDE_Okashi {
-            get {
-                object obj = ResourceManager.GetObject("GenueIDE_Okashi", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap GenueIDE_Okashi1 {
@@ -96,6 +86,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_C", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_C_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_C_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -122,6 +122,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Compile_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Compile_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_Compile1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Compile1", resourceCulture);
@@ -136,6 +146,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_CompileAndRun", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_CompileAndRun_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_CompileAndRun_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -162,6 +182,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_CPP_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_CPP_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_CPP1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_CPP1", resourceCulture);
@@ -176,6 +206,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_CSharp", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_CSharp_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_CSharp_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -202,6 +242,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_EmptyFile_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_EmptyFile_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_EmptyFile1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_EmptyFile1", resourceCulture);
@@ -216,6 +266,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Find", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Find_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Find_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -242,6 +302,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Help_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Help_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_Help1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Help1", resourceCulture);
@@ -256,6 +326,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Hotkeys", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Hotkeys_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Hotkeys_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -282,6 +362,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_HTML_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_HTML_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_HTML1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_HTML1", resourceCulture);
@@ -296,6 +386,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Java", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Java_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Java_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -322,6 +422,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Main_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Main_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_Main1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Main1", resourceCulture);
@@ -336,6 +446,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_MOE", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_MOE_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_MOE_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -362,9 +482,39 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_New_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_New_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_New1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_New1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon GenusIDE_Okashi {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Okashi", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Okashi_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Okashi_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,6 +526,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Open", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Open_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Open_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -402,6 +562,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Pause_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Pause_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_Pause1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Pause1", resourceCulture);
@@ -416,6 +586,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_PHP", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_PHP_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_PHP_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -442,6 +622,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Print_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Print_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_Print1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Print1", resourceCulture);
@@ -456,6 +646,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Run", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Run_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Run_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -482,6 +682,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Save_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Save_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_Save1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Save1", resourceCulture);
@@ -496,6 +706,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_SaveAs", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_SaveAs_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_SaveAs_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -522,6 +742,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Settings_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Settings_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_Settings1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Settings1", resourceCulture);
@@ -536,6 +766,16 @@ namespace GenusIDE.Properties {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Stop", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Stop_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Stop_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
