@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using GenusIDE.Properties;
 
@@ -9,7 +15,9 @@ namespace GenusIDE {
             InitializeComponent();
         }
 
-        private void CToolStripMenuItemClick(object sender, EventArgs e) {}
+        private void CToolStripMenuItemClick(object sender, EventArgs e) {
+
+        }
 
         private void OpenToolStripMenuItemClick(object sender, EventArgs e) {
             FileDialog dialog = new OpenFileDialog();
@@ -18,9 +26,9 @@ namespace GenusIDE {
             dialog.ShowDialog();
 
             {
-                string[] temp = dialog.FileName.Split('\\');
+                var temp = dialog.FileName.Split('\\');
 
-                //var newtabPage = new TabPage(temp.Last());
+                var newtabPage = new TabPage(temp.Last());
                 //tabControl1.TabPages.Add(newtabPage);
 
                 saveToolStripMenuItem.Text = "S&ave " + temp.Last();
@@ -29,18 +37,12 @@ namespace GenusIDE {
                 toolStripStatusLabel1.Text = temp.Last() + " opened.";
             }
 
-            Text = "GenusIDE - " + dialog.FileName;
+            this.Text = "GenusIDE - " + dialog.FileName;
+            
         }
 
         private void ExitToolStripMenuItemClick(object sender, EventArgs e) {
-            Dispose();
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e) {
-            {
-                var about = new About();
-                about.Show();
-            }
+            this.Dispose();
         }
     }
 }
