@@ -106,10 +106,21 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="DocumentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DocumentForm.Designer.cs" />
+    <Compile Include="DocumentForm1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocumentForm.resx</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +136,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TabScintilla.cs" />
-    <EmbeddedResource Include="DocumentForm.resx" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DocumentForm1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,9 +168,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GenusIDE-Main.ico" />
-    <Content Include="GenusIDE-Okashi.ico" />
     <Content Include="Library\WeifenLuo.WinFormsUI.Docking.dll" />
-    <Content Include="Resources\Icons\GenueIDE-Okashi.ico" />
+    <None Include="Resources\Images\GenusIDE_Splash.png" />
     <None Include="Resources\Images\GenusIDE-Stop_16x16.png" />
     <None Include="Resources\Images\GenusIDE-Settings_16x16.png" />
     <None Include="Resources\Images\GenusIDE-Save_16x16.png" />
@@ -282,12 +298,6 @@
       <Description>MOE Source File</Description>
       <Progid>7</Progid>
       <DefaultIcon>Resources\Icons\GenusIDE-MOE.ico</DefaultIcon>
-    </FileAssociation>
-    <FileAssociation Include=".oks">
-      <Visible>False</Visible>
-      <Description>Okashi Source File</Description>
-      <Progid>8</Progid>
-      <DefaultIcon>Resources\Icons\GenusIDE-Okashi.ico</DefaultIcon>
     </FileAssociation>
     <FileAssociation Include=".php">
       <Visible>False</Visible>

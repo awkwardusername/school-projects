@@ -102,7 +102,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(515, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(792, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -338,57 +338,57 @@
             // 
             // mOEToolStripMenuItem
             // 
-            this.mOEToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_MOE1;
+            this.mOEToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_MOE_16x16;
             this.mOEToolStripMenuItem.Name = "mOEToolStripMenuItem";
-            this.mOEToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.mOEToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mOEToolStripMenuItem.Text = "MOE";
             // 
             // okashiToolStripMenuItem
             // 
-            this.okashiToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenueIDE_Okashi1;
+            this.okashiToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Okashi_16x16;
             this.okashiToolStripMenuItem.Name = "okashiToolStripMenuItem";
-            this.okashiToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.okashiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.okashiToolStripMenuItem.Text = "Okashi";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(108, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // cToolStripMenuItem
             // 
-            this.cToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_CPP1;
+            this.cToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_CPP_16x16;
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cToolStripMenuItem.Text = "C/C++";
             this.cToolStripMenuItem.Click += new System.EventHandler(this.CToolStripMenuItemClick);
             // 
             // cToolStripMenuItem1
             // 
-            this.cToolStripMenuItem1.Image = global::GenusIDE.Properties.Resources.GenusIDE_CSharp1;
+            this.cToolStripMenuItem1.Image = global::GenusIDE.Properties.Resources.GenusIDE_CSharp_16x16;
             this.cToolStripMenuItem1.Name = "cToolStripMenuItem1";
-            this.cToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
+            this.cToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.cToolStripMenuItem1.Text = "C#";
             // 
             // pHPToolStripMenuItem
             // 
-            this.pHPToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_PHP1;
+            this.pHPToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_PHP_16x16;
             this.pHPToolStripMenuItem.Name = "pHPToolStripMenuItem";
-            this.pHPToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.pHPToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pHPToolStripMenuItem.Text = "PHP";
             // 
             // hTMLToolStripMenuItem
             // 
-            this.hTMLToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_HTML1;
+            this.hTMLToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_HTML_16x16;
             this.hTMLToolStripMenuItem.Name = "hTMLToolStripMenuItem";
-            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.hTMLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hTMLToolStripMenuItem.Text = "HTML";
             // 
             // javaToolStripMenuItem
             // 
-            this.javaToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Java1;
+            this.javaToolStripMenuItem.Image = global::GenusIDE.Properties.Resources.GenusIDE_Java_16x16;
             this.javaToolStripMenuItem.Name = "javaToolStripMenuItem";
-            this.javaToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.javaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.javaToolStripMenuItem.Text = "Java";
             // 
             // toolStripSeparator3
@@ -481,15 +481,16 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 413);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 551);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(515, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(792, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -512,8 +513,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.statusTextBox);
-            this.splitContainer1.Size = new System.Drawing.Size(515, 383);
-            this.splitContainer1.SplitterDistance = 295;
+            this.splitContainer1.Size = new System.Drawing.Size(792, 521);
+            this.splitContainer1.SplitterDistance = 401;
             this.splitContainer1.TabIndex = 5;
             // 
             // statusTextBox
@@ -523,7 +524,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.statusTextBox.Location = new System.Drawing.Point(0, -1);
             this.statusTextBox.Name = "statusTextBox";
-            this.statusTextBox.Size = new System.Drawing.Size(515, 85);
+            this.statusTextBox.Size = new System.Drawing.Size(792, 117);
             this.statusTextBox.TabIndex = 0;
             this.statusTextBox.Text = "";
             // 
@@ -572,7 +573,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 435);
+            this.ClientSize = new System.Drawing.Size(792, 573);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
