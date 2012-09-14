@@ -1,4 +1,4 @@
-GenusIDE - a generic IDE
+GenusIDE - a generic IDE [under development! :D]
 
 An Integrated Development Environment for C, C++, C#, Java, PHP, HTML, Okashi, 
 MOE, and any other programming language (as long as you configure it to do so) 
@@ -23,9 +23,13 @@ Requires:
 	
 By: Mark Jayson Fuentes <awkwardusername AT gmail.com>
 	Polytechnic University of the Philippines
+	
+	
+CREDITS!
 
-Thanks to Garrett Serack for ScintillaNET and of course, Neil Hodgson for 
-Scintilla itself.
+Thanks to Garrett Serack <gserack AT gmail.com> for ScintillaNET and of course, Neil Hodgson <neilh AT scintilla.org> for Scintilla itself.
+
+And yes, thank you to Allan Crisostomo <rockerfrick AT gmail.com> for the icons, the Okashi PL and images.
 
 		   
 		   

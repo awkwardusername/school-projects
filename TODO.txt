@@ -1,0 +1,15 @@
+GenusIDE is a WIP.
+
+To open that thing called GenusIDE.sln, you need Visual Studio 2012. Well, there are some reports that tell me it works in VS 2010 too but they need to open the project using the GenusIDE.csproj file inside school-projects\GenusIDE folder.
+
+Where am I?
+- Icons! Yes!
+- UI
+
+Where will I be?
+- ScintillaNET integration
+- better UI? dunno.
+- better documentation
+- hotkeys for everything
+- things I would like to do which I cannot currently define what
+
