@@ -1,6 +1,6 @@
-﻿namespace SCide
+﻿namespace GenusIDE
 {
-    partial class DocumentForm
+    public partial class DocumentForm
     {
         /// <summary>
         /// Required designer variable.

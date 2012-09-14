@@ -10,7 +10,7 @@ using WeifenLuo.WinFormsUI.Docking;
 #endregion Using Directives
 
 namespace GenusIDE {
-    internal sealed partial class DocumentForm : DockContent {
+    public sealed partial class DocumentForm : DockContent {
         #region Fields
 
         private string _filePath;
@@ -117,9 +117,9 @@ namespace GenusIDE {
 
         private void scintilla_StyleNeeded(object sender, StyleNeededEventArgs e) {
             // Style the _text
-            if (_iniLexer) {
-                SCide.IniLexer.StyleNeeded((Scintilla) sender, e.Range);
-            }
+            //if (_iniLexer) {
+            //    GenusIDE.IniLexer.StyleNeeded((Scintilla) sender, e.Range);
+            //}
         }
 
         #endregion Methods
