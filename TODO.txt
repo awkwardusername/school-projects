@@ -4,12 +4,17 @@ To open that thing called GenusIDE.sln, you need Visual Studio 2012. Well, there
 
 Where am I?
 - Icons! Yes!
-- UI
+- UI (and that sexy about box by @Temoto-kun)
+- ScintillaNET integration, partly implemented
+- friggin TABS!!! XD
+- superb tabs! (repeated because important. :3)
+- it can now compile using your favorite VS 2010 (although 2012 is recommended)
 
 Where will I be?
-- ScintillaNET integration
-- better UI? dunno.
+- full ScintillaNET integration
 - better documentation
 - hotkeys for everything
-- things I would like to do which I cannot currently define what
+- custom language definition
+- compiler integration
+- colors. yes. that blinkenlights.
 
