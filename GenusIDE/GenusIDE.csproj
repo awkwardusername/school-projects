@@ -56,23 +56,22 @@
     <ApplicationIcon>GenusIDE-Main.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5BC67DC2C2B9EEAFAF0EE425BF0DB8ED7C2778C9</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>CE79436668A3BEB0A0CF69FCDEE9C9144A33F9EB</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>GenusIDE_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>GenusIDE_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>GenusIDE_1_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
@@ -115,11 +114,8 @@
     <Compile Include="DocumentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DocumentForm.Designer.cs" />
-    <Compile Include="DocumentForm1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DocumentForm.resx</DependentUpon>
+    <Compile Include="DocumentForm.Designer.cs">
+      <DependentUpon>DocumentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GenusIDE.cs">
       <SubType>Form</SubType>
@@ -135,13 +131,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="TabScintilla.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DocumentForm.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>DocumentForm1.Designer.cs</LastGenOutput>
+      <DependentUpon>DocumentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenusIDE.resx">
       <DependentUpon>GenusIDE.cs</DependentUpon>
@@ -151,6 +145,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="GenusIDE_1_TemporaryKey.pfx" />
     <None Include="GenusIDE_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

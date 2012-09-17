@@ -99,7 +99,6 @@
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.closetoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.closealltoolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.scintilla = new ScintillaNET.Scintilla();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -107,7 +106,6 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scintilla)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -532,7 +530,6 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.scintilla);
             this.splitContainer1.Panel1.Controls.Add(this.dockPanel);
             // 
             // splitContainer1.Panel2
@@ -544,12 +541,14 @@
             // 
             // dockPanel
             // 
-            this.dockPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dockPanel.AllowEndUserNestedDocking = false;
+            this.dockPanel.AutoSize = true;
+            this.dockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dockPanel.DocumentStyle = WeifenLuo.WinFormsUI.Docking.DocumentStyle.DockingSdi;
             this.dockPanel.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel.Margin = new System.Windows.Forms.Padding(2);
             this.dockPanel.Name = "dockPanel";
-            this.dockPanel.Size = new System.Drawing.Size(792, 398);
+            this.dockPanel.Size = new System.Drawing.Size(792, 401);
             dockPanelGradient1.EndColor = System.Drawing.SystemColors.ControlLight;
             dockPanelGradient1.StartColor = System.Drawing.SystemColors.ControlLight;
             autoHideStripSkin1.DockStripGradient = dockPanelGradient1;
@@ -557,7 +556,7 @@
             tabGradient1.StartColor = System.Drawing.SystemColors.Control;
             tabGradient1.TextColor = System.Drawing.SystemColors.ControlDarkDark;
             autoHideStripSkin1.TabGradient = tabGradient1;
-            autoHideStripSkin1.TextFont = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            autoHideStripSkin1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dockPanelSkin1.AutoHideStripSkin = autoHideStripSkin1;
             tabGradient2.EndColor = System.Drawing.SystemColors.ControlLightLight;
             tabGradient2.StartColor = System.Drawing.SystemColors.ControlLightLight;
@@ -571,7 +570,7 @@
             tabGradient3.TextColor = System.Drawing.SystemColors.ControlText;
             dockPaneStripGradient1.InactiveTabGradient = tabGradient3;
             dockPaneStripSkin1.DocumentGradient = dockPaneStripGradient1;
-            dockPaneStripSkin1.TextFont = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dockPaneStripSkin1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabGradient4.EndColor = System.Drawing.SystemColors.ActiveCaption;
             tabGradient4.LinearGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             tabGradient4.StartColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -597,6 +596,7 @@
             dockPanelSkin1.DockPaneStripSkin = dockPaneStripSkin1;
             this.dockPanel.Skin = dockPanelSkin1;
             this.dockPanel.TabIndex = 0;
+            this.dockPanel.ActiveDocumentChanged += new System.EventHandler(this.dockPanel_ActiveDocumentChanged);
             // 
             // statusTextBox
             // 
@@ -650,16 +650,6 @@
             this.closealltoolStripMenuItem4.Size = new System.Drawing.Size(170, 22);
             this.closealltoolStripMenuItem4.Text = "Close All Except This";
             // 
-            // scintilla
-            // 
-            this.scintilla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.scintilla.Location = new System.Drawing.Point(3, 3);
-            this.scintilla.Name = "scintilla";
-            this.scintilla.Size = new System.Drawing.Size(789, 395);
-            this.scintilla.TabIndex = 2;
-            // 
             // GenusIDE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,16 +664,17 @@
             this.MinimumSize = new System.Drawing.Size(500, 400);
             this.Name = "GenusIDE";
             this.Text = "GenusIDE";
+            this.Load += new System.EventHandler(this.GenusIDE_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.scintilla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -750,7 +741,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.RichTextBox statusTextBox;
         private WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel;
-        private ScintillaNET.Scintilla scintilla;
         
 
     }

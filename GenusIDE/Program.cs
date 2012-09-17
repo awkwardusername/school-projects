@@ -5,14 +5,16 @@ using System.Windows.Forms;
 
 namespace GenusIDE {
     internal static class Program {
+
+        private static GenusIDE _genusIDE = null;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        private static void Main() {
+        private static void Main(string[] args) {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GenusIDE());
+            Application.Run(new GenusIDE(args));
         }
 
         public static string Title {

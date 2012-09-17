@@ -27,15 +27,17 @@ namespace GenusIDE {
 
         #endregion Constants
 
+
         #region Fields
 
-        private readonly Scintilla _scintilla;
-        private readonly int _startPos;
+        private Scintilla _scintilla;
+        private int _startPos;
 
-        private readonly string _text;
         private int _index;
+        private string _text;
 
         #endregion Fields
+
 
         #region Methods
 
@@ -59,7 +61,10 @@ namespace GenusIDE {
 
 
         private int Read() {
-            return _index < _text.Length ? _text[_index] : EOL;
+            if (_index < _text.Length)
+                return _text[_index];
+
+            return EOL;
         }
 
 
@@ -67,7 +72,7 @@ namespace GenusIDE {
             if (length > 0) {
                 // TODO Still using old API
                 // This will style the _length of chars and advance the style pointer.
-                ((INativeScintilla) _scintilla).SetStyling(length, style);
+                ((INativeScintilla)_scintilla).SetStyling(length, style);
             }
         }
 
@@ -75,7 +80,7 @@ namespace GenusIDE {
         public void Style() {
             // TODO Still using the old API
             // Signals that we're going to begin styling from this point.
-            ((INativeScintilla) _scintilla).StartStyling(_startPos, 0x1F);
+            ((INativeScintilla)_scintilla).StartStyling(_startPos, 0x1F);
 
             // Run our humble lexer...
             StyleWhitespace();
@@ -83,9 +88,9 @@ namespace GenusIDE {
                 case '[':
 
                     // Section, default, comment
-                    StyleUntilMatch(SECTION_STYLE, new[] {']'});
+                    StyleUntilMatch(SECTION_STYLE, new char[] { ']' });
                     StyleCh(SECTION_STYLE);
-                    StyleUntilMatch(DEFAULT_STYLE, new[] {';'});
+                    StyleUntilMatch(DEFAULT_STYLE, new char[] { ';' });
                     goto case ';';
 
                 case ';':
@@ -97,7 +102,7 @@ namespace GenusIDE {
                 default:
 
                     // Key, assignment, quote, value, comment
-                    StyleUntilMatch(KEY_STYLE, new[] {'=', ';'});
+                    StyleUntilMatch(KEY_STYLE, new char[] { '=', ';' });
                     switch (Read()) {
                         case '=':
 
@@ -107,13 +112,12 @@ namespace GenusIDE {
                                 case '"':
 
                                     // Quote
-                                    StyleCh(QUOTED_STYLE); // '"'
-                                    StyleUntilMatch(QUOTED_STYLE, new[] {'"'});
+                                    StyleCh(QUOTED_STYLE);  // '"'
+                                    StyleUntilMatch(QUOTED_STYLE, new char[] { '"' });
 
                                     // Make sure it wasn't an escaped quote
-                                    if (_index > 0 && _index < _text.Length && _text[_index - 1] == '\\') {
+                                    if (_index > 0 && _index < _text.Length && _text[_index - 1] == '\\')
                                         goto case '"';
-                                    }
 
                                     StyleCh(QUOTED_STYLE); // '"'
                                     goto default;
@@ -121,7 +125,7 @@ namespace GenusIDE {
                                 default:
 
                                     // Value, comment
-                                    StyleUntilMatch(VALUE_STYLE, new[] {';'});
+                                    StyleUntilMatch(VALUE_STYLE, new char[] { ';' });
                                     SetStyle(COMMENT_STYLE, _text.Length - _index);
                                     break;
                             }
@@ -147,7 +151,7 @@ namespace GenusIDE {
 
         public static void StyleNeeded(Scintilla scintilla, Range range) {
             // Create an instance of our lexer and bada-bing the line!
-            var lexer = new IniLexer(scintilla, range.Start, range.StartingLine.Length);
+            IniLexer lexer = new IniLexer(scintilla, range.Start, range.StartingLine.Length);
             lexer.Style();
         }
 
@@ -155,36 +159,34 @@ namespace GenusIDE {
         private void StyleUntilMatch(int style, char[] chars) {
             // Advance until we match a char in the array
             int startIndex = _index;
-            while (_index < _text.Length && Array.IndexOf(chars, _text[_index]) < 0) {
+            while (_index < _text.Length && Array.IndexOf<char>(chars, _text[_index]) < 0)
                 _index++;
-            }
 
-            if (startIndex != _index) {
+            if (startIndex != _index)
                 SetStyle(style, _index - startIndex);
-            }
         }
 
 
         private void StyleWhitespace() {
             // Advance the _index until non-whitespace character
             int startIndex = _index;
-            while (_index < _text.Length && Char.IsWhiteSpace(_text[_index])) {
+            while (_index < _text.Length && Char.IsWhiteSpace(_text[_index]))
                 _index++;
-            }
 
             SetStyle(DEFAULT_STYLE, _index - startIndex);
         }
 
         #endregion Methods
 
+
         #region Constructors
 
         private IniLexer(Scintilla scintilla, int startPos, int length) {
-            _scintilla = scintilla;
-            _startPos = startPos;
+            this._scintilla = scintilla;
+            this._startPos = startPos;
 
             // One line of _text
-            _text = scintilla.GetRange(startPos, startPos + length).Text;
+            this._text = scintilla.GetRange(startPos, startPos + length).Text;
         }
 
         #endregion Constructors
