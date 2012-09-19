@@ -12,9 +12,12 @@ namespace GenusIDE {
         /// </summary>
         [STAThread]
         private static void Main(string[] args) {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GenusIDE(args));
+            About splash = new About();
+            splash.Show();
+            Application.Run(new GenusIDE(splash));
         }
 
         public static string Title {

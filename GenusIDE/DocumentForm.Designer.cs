@@ -30,6 +30,7 @@
             // scintilla
             // 
             this.scintilla.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scintilla.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scintilla.LineWrapping.VisualFlags = ScintillaNET.LineWrappingVisualFlags.End;
             this.scintilla.Location = new System.Drawing.Point(0, 0);
             this.scintilla.Margins.Margin1.AutoToggleMarkerNumber = 0;
@@ -47,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 272);
             this.Controls.Add(this.scintilla);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DocumentForm";
             this.Text = "DocumentForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DocumentForm_FormClosing);

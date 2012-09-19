@@ -43,10 +43,11 @@ namespace GenusIDE {
         }
 
         public bool SaveAs() {
-            //if (saveFileDialog.ShowDialog() == DialogResult.OK) {
-            //    _filePath = saveFileDialog.FileName;
-            //    return Save(_filePath);
-            //}
+            FileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+                _filePath = saveFileDialog.FileName;
+                return Save(_filePath);
+            }
 
             return false;
         }
@@ -56,6 +57,7 @@ namespace GenusIDE {
                 return SaveAs();
 
             return Save(_filePath);
+            
         }
 
 
@@ -73,7 +75,7 @@ namespace GenusIDE {
                 // Prompt if not saved
                 string message = String.Format(
                     CultureInfo.CurrentCulture,
-                    "The _text in the {0} file has changed.{1}{2}Do you want to save the changes?",
+                    "The text in the {0} file has changed.{1}{2}Do you want to save the changes?",
                     Text.TrimEnd(' ', '*'),
                     Environment.NewLine,
                     Environment.NewLine);

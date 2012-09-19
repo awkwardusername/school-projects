@@ -1,7 +1,10 @@
 ﻿#region Using Directives
 
 using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using GenusIDE.Properties;
@@ -24,6 +27,7 @@ namespace GenusIDE {
         private int _newDocumentCount = 0;
         private string[] _args;
         private int _zoomLevel;
+        private About _splash;
 
         #endregion Fields
 
@@ -31,31 +35,70 @@ namespace GenusIDE {
 
         private DocumentForm NewDocument() {
             DocumentForm doc = new DocumentForm();
-            //SetScintillaToCurrentOptions(doc);
+            SetScintillaToCurrentOptions(doc);
             doc.Text = String.Format(CultureInfo.CurrentCulture, "{0}{1}", NEW_DOCUMENT_TEXT, ++_newDocumentCount);
+
+            setStatusMessages(doc.Text);
+
             doc.Show(dockPanel);
             // TODO Implement 
             //toolIncremental.Searcher.Scintilla = doc.Scintilla;
             return doc;
         }
 
+        private DocumentForm NewDocument(string ext) {
+            DocumentForm doc = new DocumentForm();
+            //SetScintillaToCurrentOptions(doc);
+            doc.Text = String.Format(CultureInfo.CurrentCulture, "{0}{1}." + ext, NEW_DOCUMENT_TEXT, ++_newDocumentCount);
+
+            setStatusMessages(doc.Text);
+
+            doc.Show(dockPanel);
+            
+            return doc;
+        }
+
+        private void OpenFile() {
+            
+        }
+
+
+        private DocumentForm OpenFile(string filePath) {
+            DocumentForm doc = new DocumentForm();
+
+            SetScintillaToCurrentOptions(doc);
+
+            doc.Scintilla.Text = File.ReadAllText(filePath);
+            doc.Scintilla.UndoRedo.EmptyUndoBuffer();
+            doc.Scintilla.Modified = false;
+            doc.Text = Path.GetFileName(filePath);
+            doc.FilePath = filePath;
+
+            setStatusMessages(doc.Text);
+
+            doc.Show(dockPanel);
+           
+
+            return doc;
+        }
+
         private void SetScintillaToCurrentOptions(DocumentForm doc) {
             // Turn on line numbers?
-            //if (lineNumbersToolStripMenuItem.Checked)
-            //    doc.Scintilla.Margins.Margin0.Width = LINE_NUMBERS_MARGIN_WIDTH;
-            //else
+            if (lineNumbersToolStripMenuItem.Checked)
+                doc.Scintilla.Margins.Margin0.Width = LINE_NUMBERS_MARGIN_WIDTH;
+            else
                 doc.Scintilla.Margins.Margin0.Width = 0;
 
-            //// Turn on white space?
-            //if (whitespaceToolStripMenuItem.Checked)
-            //    doc.Scintilla.Whitespace.Mode = WhitespaceMode.VisibleAlways;
-            //else
+            // Turn on white space?
+            if (whitespaceSymbolsToolStripMenuItem.Checked)
+                doc.Scintilla.Whitespace.Mode = WhitespaceMode.VisibleAlways;
+            else
                 doc.Scintilla.Whitespace.Mode = WhitespaceMode.Invisible;
 
-            //// Turn on word wrap?
-            //if (wordWrapToolStripMenuItem.Checked)
-            //    doc.Scintilla.LineWrapping.Mode = LineWrappingMode.Word;
-            //else
+            // Turn on word wrap?
+            if (wordWrapToolStripMenuItem.Checked)
+                doc.Scintilla.LineWrapping.Mode = LineWrappingMode.Word;
+            else
                 doc.Scintilla.LineWrapping.Mode = LineWrappingMode.None;
 
             // Show EOL?
@@ -68,24 +111,39 @@ namespace GenusIDE {
         private void CToolStripMenuItemClick(object sender, EventArgs e) { }
 
         private void OpenToolStripMenuItemClick(object sender, EventArgs e) {
-            FileDialog dialog = new OpenFileDialog();
-            dialog.Title = "Open file...";
-            dialog.Filter = Resources.File_Types;
-            dialog.ShowDialog();
-            
-            {
-                var temp = dialog.FileName.Split('\\');
+            FileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Open file...";
+            openFileDialog.Filter = Resources.File_Types;
 
-                //var newtabPage = new TabPage(temp.Last());
-                //tabControl1.TabPages.Add(newtabPage);
+            if (openFileDialog.ShowDialog() != DialogResult.OK)
+                return;
 
-                saveToolStripMenuItem.Text = "S&ave " + temp.Last();
-                closetoolStripMenuItem3.Text = "&Close" + temp.Last();
+            foreach (string filePath in openFileDialog.FileNames) {
+                // Ensure this file isn't already open
+                bool isOpen = false;
+                foreach (DocumentForm documentForm in dockPanel.Documents) {
+                    if (filePath.Equals(documentForm.FilePath, StringComparison.OrdinalIgnoreCase)) {
+                        documentForm.Select();
+                        isOpen = true;
+                        break;
+                    }
+                }
 
-                toolStripStatusLabel1.Text = temp.Last() + " opened.";
+                // Open the files
+                if (!isOpen)
+                    OpenFile(filePath);
             }
+            
+            setStatusMessages(openFileDialog.FileName.Split('\\').Last());
+        }
 
-            Text = "GenusIDE - " + dialog.FileName;
+        private void setStatusMessages(string filename) {
+            saveToolStripMenuItem.Text = "S&ave " + filename;
+            closetoolStripMenuItem3.Text = "&Close" + filename;
+
+            setStatusLabel(filename + " opened.");
+
+            Text = "GenusIDE - " + filename;
         }
 
         private void ExitToolStripMenuItemClick(object sender, EventArgs e) {
@@ -112,19 +170,40 @@ namespace GenusIDE {
 
         private void emptyTextFileToolStripMenuItem_Click(object sender, EventArgs e) {
             NewDocument();
+            SetLanguage(String.Empty);
         }
 
         private void dockPanel_ActiveDocumentChanged(object sender, EventArgs e) {
             // Update the main form _text to show the current document
             if (ActiveDocument != null)
-                this.Text = String.Format(CultureInfo.CurrentCulture, "{0} - {1}", ActiveDocument.Text, Program.Title);
+                setStatusMessages(ActiveDocument.Text);
             else
                 this.Text = Program.Title;
         }
 
         private void GenusIDE_Load(object sender, EventArgs e) {
             NewDocument();
+            zoomtrackBar.Value = _zoomLevel;
+            _splash.Close();
+            _splash.Dispose();
         }
+
+        /** TODO currently dangerous code, but working.
+        private void LoadFonts() {
+            var fontList = new List<string>(); 
+            foreach (FontFamily ff in System.Drawing.FontFamily.Families) {
+                if (ff.IsStyleAvailable(FontStyle.Regular)) {
+                    Font font = new Font(ff, 10);
+                    LogFont lf = new LogFont();
+                    font.ToLogFont(lf);
+                    if (lf.lfPitchAndFamily == 1) {
+                        fontList.Add(lf.lfFaceName);
+                    }
+                }
+            }
+
+            fontSelectComboBox.ComboBox.DataSource = fontList;
+        } **/
 
         private void SetLanguage(string language) {
             if ("ini".Equals(language, StringComparison.OrdinalIgnoreCase)) {
@@ -144,17 +223,11 @@ namespace GenusIDE {
             }
         }
 
-
-
-        public GenusIDE() {
+        public GenusIDE(About splash) {
+            _splash = splash;
             InitializeComponent();
-        }
-
-        public GenusIDE(string [] args) : this() {
-            this._args = args;
-
-            //	I personally really dislike the OfficeXP look on Windows XP with the blue.
-            ToolStripProfessionalRenderer renderer = new ToolStripProfessionalRenderer();
+            //LoadFonts();          // dangerous. Causes AccessViolationException most of the times. 
+            var renderer = new ToolStripProfessionalRenderer();
             renderer.ColorTable.UseSystemColors = true;
             renderer.RoundedEdges = false;
             ToolStripManager.Renderer = renderer;
@@ -162,6 +235,143 @@ namespace GenusIDE {
             // Set the application title
             Text = Program.Title;
             aboutToolStripMenuItem.Text = String.Format(CultureInfo.CurrentCulture, "&About {0}", Program.Title);
+        }
+
+       
+
+        private void mOESourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            NewDocument("moe");
+        }
+
+        private void okashiSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            NewDocument("oks");
+        }
+
+        private void cCSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            NewDocument("c");
+            SetLanguage("cpp");
+        }
+
+        private void cSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            NewDocument("cpp");
+            SetLanguage("cpp");
+        }
+
+        private void cSourceFileToolStripMenuItem1_Click(object sender, EventArgs e) {
+            NewDocument("cs");
+            SetLanguage("cs");
+        }
+
+        private void pHPSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            NewDocument("php");
+            SetLanguage("php");
+        }
+
+        private void hTMLSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            NewDocument("html");
+            SetLanguage("html");
+        }
+
+        private void javaSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
+            NewDocument("java");
+
+        }
+
+        private void zoomtrackBar_ValueChanged(object sender, EventArgs e) {
+            zoomlabel1.Text = _zoomLevel + "%";
+            UpdateAllScintillaZoom();
+        }
+
+        private void whitespaceSymbolsToolStripMenuItem_Click(object sender, EventArgs e) {
+            //whiteSpaceSymbolsToolStripMenuItem.C
+            // Toggle the whitespace mode for all open files
+            whitespaceSymbolsToolStripMenuItem.Checked = !whitespaceSymbolsToolStripMenuItem.Checked;
+            foreach (DocumentForm doc in dockPanel.Documents) {
+                if (whitespaceSymbolsToolStripMenuItem.Checked)
+                    doc.Scintilla.Whitespace.Mode = WhitespaceMode.VisibleAlways;
+                else
+                    doc.Scintilla.Whitespace.Mode = WhitespaceMode.Invisible;
+            }
+        }
+
+        private void closetoolStripMenuItem2_Click(object sender, EventArgs e) {
+            ActiveDocument.Close();
+            setStatusLabel("Document closed.");
+        }
+
+        private void saveAllToolStripMenuItem_Click(object sender, EventArgs e) {
+            foreach (DocumentForm doc in dockPanel.Documents) {
+                doc.Activate();
+                doc.Save();
+            }
+            setStatusLabel("All Files Saved.");
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (ActiveDocument != null) {
+                if (ActiveDocument.Save()) {
+                    setStatusLabel(ActiveDocument.Text + " saved.");
+                }
+            }
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (ActiveDocument != null)
+                if (ActiveDocument.SaveAs())
+                    setStatusLabel(ActiveDocument.Text + " saved.");
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (ActiveDocument != null) {
+                ActiveDocument.Scintilla.Printing.PrintPreview();
+                setStatusLabel("Displaying printing options...");
+            }
+        }
+
+        private void setStatusLabel(string status) {
+            statusLabel.Text = status;
+        }
+
+        private void UpdateAllScintillaZoom() {
+            // Update zoom level for all files
+            foreach (DocumentForm doc in dockPanel.Documents)
+                doc.Scintilla.Zoom = _zoomLevel;
+        }
+
+        private void lineNumbersToolStripMenuItem_Click(object sender, EventArgs e) {
+            // Toggle the line numbers margin for all documents
+            lineNumbersToolStripMenuItem.Checked = !lineNumbersToolStripMenuItem.Checked;
+            foreach (DocumentForm docForm in dockPanel.Documents) {
+                if (lineNumbersToolStripMenuItem.Checked)
+                    docForm.Scintilla.Margins.Margin0.Width = LINE_NUMBERS_MARGIN_WIDTH;
+                else
+                    docForm.Scintilla.Margins.Margin0.Width = 0;
+            }
+        }
+
+        private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e) {
+            // Toggle word wrap for all open files
+            wordWrapToolStripMenuItem.Checked = !wordWrapToolStripMenuItem.Checked;
+            foreach (DocumentForm doc in dockPanel.Documents) {
+                if (wordWrapToolStripMenuItem.Checked)
+                    doc.Scintilla.LineWrapping.Mode = LineWrappingMode.Word;
+                else
+                    doc.Scintilla.LineWrapping.Mode = LineWrappingMode.None;
+            }
+        }
+
+        private void findToolStripMenuItem_Click(object sender, EventArgs e) {
+            ActiveDocument.Scintilla.FindReplace.ShowFind();
+        }
+
+        private void undotoolStripMenuItem2_Click(object sender, EventArgs e) {
+            if (ActiveDocument != null)
+                ActiveDocument.Scintilla.UndoRedo.Undo();
+        }
+
+        private void redotoolStripMenuItem2_Click(object sender, EventArgs e) {
+            if (ActiveDocument != null)
+                ActiveDocument.Scintilla.UndoRedo.Redo();
         }
 
     }

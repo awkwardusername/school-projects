@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 namespace GenusIDE.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -407,6 +410,16 @@ namespace GenusIDE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_LineNumbers {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_LineNumbers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon GenusIDE_Main {
@@ -637,6 +650,16 @@ namespace GenusIDE.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Redo {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Redo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon GenusIDE_Run {
@@ -759,6 +782,16 @@ namespace GenusIDE.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_ShowEOL {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_ShowEOL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GenusIDE_Splash {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Splash", resourceCulture);
@@ -792,6 +825,46 @@ namespace GenusIDE.Properties {
         internal static System.Drawing.Bitmap GenusIDE_Stop1 {
             get {
                 object obj = ResourceManager.GetObject("GenusIDE_Stop1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Undo {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Undo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Whitespace {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Whitespace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_WordWrap {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_WordWrap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenusIDE_Zoom {
+            get {
+                object obj = ResourceManager.GetObject("GenusIDE_Zoom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

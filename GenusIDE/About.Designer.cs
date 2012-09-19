@@ -35,6 +35,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.About_KeyPress);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.About_MouseClick);
