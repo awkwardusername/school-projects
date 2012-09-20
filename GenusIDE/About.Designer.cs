@@ -1,4 +1,4 @@
-﻿namespace GenusIDE {
+namespace GenusIDE {
     partial class About {
         /// <summary>
         /// Required designer variable.

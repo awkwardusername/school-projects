@@ -4679,7 +4679,7 @@
         m10DywfODjoMXrjleuvyba/b1++svDMwFDJ0dzhyeOQu++7kvaR7L+9n3J9/sOkh+mHhI6lH5Y+VHtf9
         qPdj64jlyJlR19G+J0FPHoyxxp7/lP7Th/H8p+Sn5ROqE42TZpOnp9ynbj5b/Wz8eerz+emCn6V/rn6h
         ++K7Xxx/6ZtZNTP+kv9y4dfiV/Kvjrxe9rp71n/28ZvkN/NzhW/l3x59x3jX+z7s/cR85gfsh4qPeh+7
-        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA7DAAAOwwHHb6hkAAA9d0lEQVR4Xu2d+7cU1Z3o50+c
+        Pnl/eriQvLDwG/eE8/s6uL5TAAAACXBIWXMAAA7AAAAOwAFq1okJAAA9d0lEQVR4Xu2d+7cU1Z3o50+c
         Hybrzsxad61J5k6SmWTuTebhTGJmRpJIEk00JpKHiTGKKEhEEAXlJQ9RHioIgvjgJSiCioDiC0nf/uzm
         e9zU2d1d3X36nDp9Pqz1WXRX1d61q6pPfWrv2vu7/+LcuXOtpUvvFxERkYaAm//i8OGXW1/6y79q3fCl
         r4qIiMw5i791Y+u++5YuWP7mr/+2hZuToP/uf/3v1v1/d5OIiMic8/Sv/9T685//vGD5+j98XUGLiEjz
@@ -9919,5 +9919,14 @@
   </data>
   <data name="GenusIDE_Undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\GenusIDE-Undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="java" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Configuration\java.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="moe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Configuration\moe.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="ScintillaNET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Configuration\ScintillaNET.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>

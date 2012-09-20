@@ -1,8 +1,7 @@
 ﻿#region Using Directives
 
 using System;
-using System.Collections.Generic;
-using System.Drawing;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -28,6 +27,8 @@ namespace GenusIDE {
         private string[] _args;
         private int _zoomLevel;
         private About _splash;
+        private string _filetype = "txt";
+        private string filename = "";
 
         #endregion Fields
 
@@ -57,11 +58,6 @@ namespace GenusIDE {
             
             return doc;
         }
-
-        private void OpenFile() {
-            
-        }
-
 
         private DocumentForm OpenFile(string filePath) {
             DocumentForm doc = new DocumentForm();
@@ -108,7 +104,9 @@ namespace GenusIDE {
             doc.Scintilla.Zoom = _zoomLevel;
         }
 
-        private void CToolStripMenuItemClick(object sender, EventArgs e) { }
+        private void CToolStripMenuItemClick(object sender, EventArgs e) {
+            SetLanguage("cpp");
+        }
 
         private void OpenToolStripMenuItemClick(object sender, EventArgs e) {
             FileDialog openFileDialog = new OpenFileDialog();
@@ -133,6 +131,13 @@ namespace GenusIDE {
                 if (!isOpen)
                     OpenFile(filePath);
             }
+
+            _filetype = openFileDialog.FileName.Split('.').Last();
+
+            if (_filetype.Equals("c") || _filetype.Equals("cpp") || _filetype.Equals("h") || _filetype.Equals("cxx")) {
+                SetLanguage("cpp");
+            } else 
+                SetLanguage(_filetype);
             
             setStatusMessages(openFileDialog.FileName.Split('\\').Last());
         }
@@ -206,8 +211,10 @@ namespace GenusIDE {
         } **/
 
         private void SetLanguage(string language) {
+            _filetype = language;
             if ("ini".Equals(language, StringComparison.OrdinalIgnoreCase)) {
                 // Reset/set all styles and prepare _scintilla for custom lexing
+
                 ActiveDocument.IniLexer = true;
                 IniLexer.Init(ActiveDocument.Scintilla);
             } else {
@@ -241,10 +248,12 @@ namespace GenusIDE {
 
         private void mOESourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
             NewDocument("moe");
+            SetLanguage("ini");
         }
 
         private void okashiSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
             NewDocument("oks");
+
         }
 
         private void cCSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -274,12 +283,11 @@ namespace GenusIDE {
 
         private void javaSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
             NewDocument("java");
-
+            SetLanguage("java");
         }
 
         private void zoomtrackBar_ValueChanged(object sender, EventArgs e) {
-            zoomlabel1.Text = _zoomLevel + "%";
-            UpdateAllScintillaZoom();
+            
         }
 
         private void whitespaceSymbolsToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -372,6 +380,55 @@ namespace GenusIDE {
         private void redotoolStripMenuItem2_Click(object sender, EventArgs e) {
             if (ActiveDocument != null)
                 ActiveDocument.Scintilla.UndoRedo.Redo();
+        }
+
+        private void cToolStripMenuItem1_Click(object sender, EventArgs e) {
+            SetLanguage("cs");
+        }
+
+        private void pHPToolStripMenuItem_Click(object sender, EventArgs e) {
+            SetLanguage("php");
+        }
+
+        private void hTMLToolStripMenuItem_Click(object sender, EventArgs e) {
+            SetLanguage("html");
+        }
+
+        private void javaToolStripMenuItem_Click(object sender, EventArgs e) {
+            SetLanguage("java");
+        }
+
+        private void zoomtrackBar_Scroll(object sender, EventArgs e) {
+            _zoomLevel = zoomtrackBar.Value;
+            UpdateAllScintillaZoom();
+        }
+
+        private void compileToolStripMenuItem_Click(object sender, EventArgs e) {
+            Process cmd = new Process {
+                                      StartInfo = {
+                                                      Arguments =
+                                                          "gcc " + "-o " + Path.GetFileNameWithoutExtension(ActiveDocument.FilePath) + " " +
+                                                          ActiveDocument.FilePath,
+                                                      UseShellExecute = false,
+                                                      FileName = "cmd.exe",
+                                                      RedirectStandardOutput = true,
+                                                      CreateNoWindow = true
+                                                      
+                                                  }
+                                  };
+
+            cmd.Start();
+
+            StreamReader sr = cmd.StandardOutput;
+            while (!sr.EndOfStream) {
+                String s = sr.ReadLine();
+                if (s != "") {
+                    statusTextBox.Text += DateTime.Now.ToString() + ": " + s + Environment.NewLine;
+                }
+                statusTextBox.Refresh();
+            }
+           
+            
         }
 
     }

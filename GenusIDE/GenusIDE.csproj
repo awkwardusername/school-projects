@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>Z:\Public\Documents\GenusIDE-Icons\GenusIDE Deploy\</PublishUrl>
+    <PublishUrl>C:\Users\hoshi~\Desktop\Debug\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,6 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -63,7 +62,7 @@
     <ManifestKeyFile>GenusIDE_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>false</GenerateManifests>
+    <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
@@ -164,7 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GenusIDE-Main.ico" />
-    <Content Include="Library\WeifenLuo.WinFormsUI.Docking.dll" />
+    <Content Include="Library\WeifenLuo.WinFormsUI.Docking.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Images\GenusIDE-Undo.png" />
     <None Include="Resources\Images\GenusIDE-Redo.png" />
     <None Include="Resources\Images\GenusIDE-LineNumbers.png" />
@@ -199,6 +200,9 @@
     <None Include="Resources\Images\GenusIDE-C_16x16.png" />
     <None Include="Resources\Images\GenusIDE-Stop.png" />
     <None Include="Resources\Images\GenueIDE-Okashi.png" />
+    <None Include="Resources\Configuration\java.xml" />
+    <None Include="Resources\Configuration\moe.xml" />
+    <None Include="Resources\Configuration\ScintillaNET.xml" />
     <Content Include="Resources\Icons\GenusIDE-C.ico" />
     <None Include="Resources\Images\GenusIDE-C.png" />
     <Content Include="Resources\Icons\GenusIDE-Compile.ico" />
@@ -245,9 +249,15 @@
     <Content Include="Resources\Icons\GenusIDE-Settings.ico" />
     <None Include="Resources\Images\GenusIDE-Settings.png" />
     <Content Include="Resources\Icons\GenusIDE-Stop.ico" />
-    <Content Include="Library\SciLexer.dll" />
-    <Content Include="Library\SciLexer64.dll" />
-    <Content Include="Library\ScintillaNET.dll" />
+    <Content Include="Library\SciLexer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\SciLexer64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Library\ScintillaNET.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
