@@ -87,8 +87,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
     <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.7.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -111,6 +113,12 @@
     <Compile Include="GenusIDE.Designer.cs">
       <DependentUpon>GenusIDE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="IniLexer.cs" />
     <Compile Include="LogFont.cs" />
     <Compile Include="Program.cs" />
@@ -128,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GenusIDE.resx">
       <DependentUpon>GenusIDE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GenusIDE-Main.ico" />
+    <None Include="Resources\Images\GenusIDE_HelpForm.png" />
     <Content Include="WeifenLuo.WinFormsUI.Docking.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

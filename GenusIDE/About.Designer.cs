@@ -24,7 +24,18 @@ namespace GenusIDE {
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
+            this.versionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // versionLabel
+            // 
+            this.versionLabel.AutoSize = true;
+            this.versionLabel.Location = new System.Drawing.Point(373, 280);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(35, 13);
+            this.versionLabel.TabIndex = 0;
+            this.versionLabel.Text = "label1";
+            this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // About
             // 
@@ -32,17 +43,22 @@ namespace GenusIDE {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GenusIDE.Properties.Resources.GenusIDE_Splash;
             this.ClientSize = new System.Drawing.Size(488, 302);
+            this.Controls.Add(this.versionLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.About_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.About_KeyPress);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.About_MouseClick);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label versionLabel;
     }
 }

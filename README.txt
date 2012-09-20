@@ -1,15 +1,12 @@
 GenusIDE - a generic IDE [under development! :D]
 
-An Integrated Development Environment for C, C++, C#, Java, PHP, HTML, Okashi, 
-MOE, and any other programming language (as long as you configure it to do so) 
-without the annoyances of fancy scrollbars, fancy UI, sparkling methods and 
+An Integrated Development Environment for C, C++, C#, HTML, without the annoyances of fancy scrollbars, fancy UI, sparkling methods and 
 functions, automagical refactoring, and splash screens.
 
 Has the following features:
 	- syntax (friggin) highlighting
 	- code (friggin) completion
 	- tabbed (friggin) pages
-	- instant (friggin) compiler integration [with C, C++, C#, Okashi, MOE, and Java]
 	- (friggin) hotkeys for almost everything
 	- code (friggin) color printing
 	- configurable syntax schemes and code completion features
@@ -22,6 +19,12 @@ Requires:
 	- 1GHz CPU (it runs on netbooks!)
 	
 By: Mark Jayson Fuentes <awkwardusername AT gmail.com>
+	Paul Cedrick Artigo <paulartigo AT ymail.com>
+	Bernard Garcia <aicragdranreb AT yahoo.com>
+	Lorenz Yap
+	Christopher Arellano
+	
+	BSCS 3-2
 	Polytechnic University of the Philippines
 	
 	

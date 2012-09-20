@@ -111,7 +111,7 @@ namespace GenusIDE {
         private void OpenToolStripMenuItemClick(object sender, EventArgs e) {
             FileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Open file...";
-            openFileDialog.Filter = Resources.File_Types;
+            openFileDialog.Filter = "C/C++ (*.c, *.cpp, *.cxx, *.h, *.hxx)|*.c;*.cpp;*.cxx;*.h;*.hxx|C# (*.cs)|*.cs|HTML (*.html, *.htm)|*.html;*.htm|Text (*.txt)|*.txt|All Files|*.*";
 
             if (openFileDialog.ShowDialog() != DialogResult.OK)
                 return;
@@ -404,18 +404,12 @@ namespace GenusIDE {
         }
 
         private void compileToolStripMenuItem_Click(object sender, EventArgs e) {
-            Process cmd = new Process {
-                                      StartInfo = {
-                                                      Arguments =
-                                                          "gcc " + "-o " + Path.GetFileNameWithoutExtension(ActiveDocument.FilePath) + " " +
-                                                          ActiveDocument.FilePath,
-                                                      UseShellExecute = false,
-                                                      FileName = "cmd.exe",
-                                                      RedirectStandardOutput = true,
-                                                      CreateNoWindow = true
-                                                      
-                                                  }
-                                  };
+            Process cmd = new Process();
+            cmd.StartInfo.Arguments = "tcc" + " -o " + Path.GetFileNameWithoutExtension(ActiveDocument.FilePath) + " " + ActiveDocument.FilePath;
+            cmd.StartInfo.UseShellExecute = false;
+            cmd.StartInfo.FileName = "cmd";
+            cmd.StartInfo.RedirectStandardOutput = true;
+            cmd.StartInfo.CreateNoWindow = true;
 
             cmd.Start();
 
@@ -427,9 +421,16 @@ namespace GenusIDE {
                 }
                 statusTextBox.Refresh();
             }
-           
-            
         }
 
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e) {
+            using (Help help = new Help()) {
+                help.ShowDialog();
+            }
+        }
+
+        private void snippetsToolStripMenuItem_Click(object sender, EventArgs e) {
+            ActiveDocument.Scintilla.Snippets.ShowSnippetList();
+        }
     }
 }
