@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -150,7 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GenusIDE-Main.ico" />
-    <Content Include="Library\WeifenLuo.WinFormsUI.Docking.dll">
+    <Content Include="WeifenLuo.WinFormsUI.Docking.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Images\GenusIDE-Undo.png" />
@@ -236,13 +236,13 @@
     <Content Include="Resources\Icons\GenusIDE-Settings.ico" />
     <None Include="Resources\Images\GenusIDE-Settings.png" />
     <Content Include="Resources\Icons\GenusIDE-Stop.ico" />
-    <Content Include="Library\SciLexer.dll">
+    <Content Include="SciLexer.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Library\SciLexer64.dll">
+    <Content Include="SciLexer64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Library\ScintillaNET.dll">
+    <Content Include="ScintillaNET.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -311,6 +311,9 @@
       <Progid>1</Progid>
       <DefaultIcon>Resources\Icons\GenusIDE-EmptyFile.ico</DefaultIcon>
     </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
