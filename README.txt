@@ -1,7 +1,6 @@
 GenusIDE - a generic IDE [under development! :D]
 
-An Integrated Development Environment for C, C++, C#, HTML, without the annoyances of fancy scrollbars, fancy UI, sparkling methods and 
-functions, automagical refactoring, and splash screens.
+An Integrated Development Environment for C, C++, C#, HTML, without the annoyances of fancy scrollbars, fancy UI, sparkling methods and functions, automagical refactoring, and splash screens.
 
 Has the following features:
 	- syntax (friggin) highlighting
