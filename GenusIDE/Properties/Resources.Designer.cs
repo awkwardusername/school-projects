@@ -896,29 +896,6 @@ namespace GenusIDE.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-        ///&lt;ScintillaNET&gt;
-        ///	&lt;Language Name=&quot;moe&quot;&gt;
-        ///		&lt;AutoComplete FillUpCharacters=&quot;.([&quot; SingleLineAccept=&quot;True&quot; IsCaseSensitive=&quot;False&quot;&gt;
-        ///			&lt;List&gt;
-        ///				add arry as bool cnst dqe eqe flse flt inpt is itr lst no num pop prnt push rpt rtrn str true
-        ///			&lt;/List&gt;
-        ///		&lt;/AutoComplete&gt;
-        ///
-        ///		&lt;Indentation TabWidth=&quot;4&quot; SmartIndentType=&quot;cpp&quot; /&gt;
-        ///			
-        ///		
-        ///		&lt;Lexer LineCommentPrefix=&quot;//&quot;&gt;
-        ///			&lt;Keywords List=&quot;0&quot; Inherit=&quot;False&quot;&gt;
-        ///				add as cnst dqe eqe flse inpt is itr lst no pop prnt push r [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string moe {
-            get {
-                return ResourceManager.GetString("moe", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
         ///&lt;ScintillaNET&gt;
         ///	&lt;Language Name=&quot;default&quot;&gt;

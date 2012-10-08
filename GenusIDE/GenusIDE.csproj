@@ -101,6 +101,7 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsoleTools.cs" />
     <Compile Include="DocumentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,7 +162,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GenusIDE-Main.ico" />
+    <None Include="run.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Images\GenusIDE_HelpForm.png" />
+    <None Include="lexer.EXE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SEMANTIC.EXE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="WeifenLuo.WinFormsUI.Docking.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -200,7 +210,10 @@
     <None Include="Resources\Images\GenusIDE-Stop.png" />
     <None Include="Resources\Images\GenueIDE-Okashi.png" />
     <None Include="Resources\Configuration\java.xml" />
-    <None Include="Resources\Configuration\moe.xml" />
+    <None Include="Resources\moe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\Configuration\ScintillaNET.xml" />
     <Content Include="Resources\Icons\GenusIDE-C.ico" />
     <None Include="Resources\Images\GenusIDE-C.png" />

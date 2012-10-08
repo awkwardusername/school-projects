@@ -111,7 +111,7 @@ namespace GenusIDE {
         private void OpenToolStripMenuItemClick(object sender, EventArgs e) {
             FileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Open file...";
-            openFileDialog.Filter = "C/C++ (*.c, *.cpp, *.cxx, *.h, *.hxx)|*.c;*.cpp;*.cxx;*.h;*.hxx|C# (*.cs)|*.cs|HTML (*.html, *.htm)|*.html;*.htm|Text (*.txt)|*.txt|All Files|*.*";
+            openFileDialog.Filter = "MOE (*.moe)|*.moe|C/C++ (*.c, *.cpp, *.cxx, *.h, *.hxx)|*.c;*.cpp;*.cxx;*.h;*.hxx|C# (*.cs)|*.cs|HTML (*.html, *.htm)|*.html;*.htm|Text (*.txt)|*.txt|All Files|*.*";
 
             if (openFileDialog.ShowDialog() != DialogResult.OK)
                 return;
@@ -248,7 +248,7 @@ namespace GenusIDE {
 
         private void mOESourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
             NewDocument("moe");
-            SetLanguage("ini");
+            SetLanguage("moe");
         }
 
         private void okashiSourceFileToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -404,23 +404,20 @@ namespace GenusIDE {
         }
 
         private void compileToolStripMenuItem_Click(object sender, EventArgs e) {
-            Process cmd = new Process();
-            cmd.StartInfo.Arguments = "tcc" + " -o " + Path.GetFileNameWithoutExtension(ActiveDocument.FilePath) + " " + ActiveDocument.FilePath;
-            cmd.StartInfo.UseShellExecute = false;
-            cmd.StartInfo.FileName = "cmd";
-            cmd.StartInfo.RedirectStandardOutput = true;
-            cmd.StartInfo.CreateNoWindow = true;
+            var processStartInfo = new ProcessStartInfo {
+                FileName = "cmd.exe",
+                Arguments = "/K" + AppDomain.CurrentDomain.BaseDirectory + "lexer.EXE " + Path.GetFullPath(ActiveDocument.FilePath),
+                RedirectStandardInput = false,
+                RedirectStandardOutput = false,
+                UseShellExecute = false,
+            };
 
-            cmd.Start();
+            var process = Process.Start(processStartInfo);
+            process.WaitForExit();
+            //automator.StandardInputRead -= AutomatorStandardInputRead;
+            process.Close();
 
-            StreamReader sr = cmd.StandardOutput;
-            while (!sr.EndOfStream) {
-                String s = sr.ReadLine();
-                if (s != "") {
-                    statusTextBox.Text += DateTime.Now.ToString() + ": " + s + Environment.NewLine;
-                }
-                statusTextBox.Refresh();
-            }
+            //cmd.Start();
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -431,6 +428,81 @@ namespace GenusIDE {
 
         private void snippetsToolStripMenuItem_Click(object sender, EventArgs e) {
             ActiveDocument.Scintilla.Snippets.ShowSnippetList();
+        }
+
+        private void mOEToolStripMenuItem_Click(object sender, EventArgs e) {
+            SetLanguage("moe");
+        }
+
+        private void compileRunToolStripMenuItem_Click(object sender, EventArgs e) {
+            var processStartInfo1 = new ProcessStartInfo {
+                FileName = "cmd.exe",
+                Arguments = "/K" + AppDomain.CurrentDomain.BaseDirectory + "lexer.EXE " + Path.GetFullPath(ActiveDocument.FilePath),
+                RedirectStandardInput = false,
+                RedirectStandardOutput = false,
+                UseShellExecute = false,
+            };
+
+            var process1 = Process.Start(processStartInfo1);
+            process1.WaitForExit();
+            //automator.StandardInputRead -= AutomatorStandardInputRead;
+            process1.Close();
+
+
+            var processStartInfo = new ProcessStartInfo {
+                FileName = "cmd.exe",
+                Arguments = "/K" + AppDomain.CurrentDomain.BaseDirectory + "semantic.EXE output.mlx",
+                RedirectStandardInput = false,
+                RedirectStandardOutput = false,
+                UseShellExecute = false,
+            };
+
+            var process = Process.Start(processStartInfo);
+            process.WaitForExit();
+
+            process.Close();
+        }
+
+        private void runToolStripMenuItem_Click(object sender, EventArgs e) {
+            var processStartInfo = new ProcessStartInfo {
+                FileName = "cmd.exe",
+                Arguments = "/K" + AppDomain.CurrentDomain.BaseDirectory + "semantic.EXE output.mlx",
+                RedirectStandardInput = false,
+                RedirectStandardOutput = false,
+                UseShellExecute = false,
+            };
+
+            var process = Process.Start(processStartInfo);
+            process.WaitForExit();
+       
+            process.Close();
+        }
+
+        void ExecuteCommand(string command) {
+            int ExitCode;
+            ProcessStartInfo ProcessInfo;
+
+            ProcessInfo = new ProcessStartInfo("cmd.exe", "/K " + command);
+            ProcessInfo.CreateNoWindow = true;
+            ProcessInfo.UseShellExecute = false;
+            // *** Redirect the output ***
+            ProcessInfo.RedirectStandardError = true;
+            ProcessInfo.RedirectStandardOutput = true;
+
+            Process process = Process.Start(ProcessInfo);
+            process.WaitForExit();
+
+            // *** Read the streams ***
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+
+            ExitCode = process.ExitCode;
+
+            statusTextBox.Text = "output>>" + (String.IsNullOrEmpty(output) ? "(none)" : output);
+            Console.WriteLine("output>>" + (String.IsNullOrEmpty(output) ? "(none)" : output));
+            Console.WriteLine("error>>" + (String.IsNullOrEmpty(error) ? "(none)" : error));
+            Console.WriteLine("ExitCode: " + ExitCode.ToString(), "ExecuteCommand");
+            process.Close();
         }
     }
 }

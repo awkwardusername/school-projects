@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScintillaNET>
+
+	<Language Name="moe">
+		<AutoComplete FillUpCharacters=".([" SingleLineAccept="True" IsCaseSensitive="False">
+			<List>
+				run add arry as bool cnst dqe eqe flse true flt inpt is itr lst 
+				no num pop prnt push rpt rtrn str
+			</List>
+		</AutoComplete>
+
+		<Indentation TabWidth="4" SmartIndentType="cpp" />
+
+
+		<Lexer LineCommentPrefix="//" StreamCommentPrefix="/* " StreamCommentSuffix=" */">
+			<Keywords List="0" Inherit="False">
+				run add arry as bool cnst dqe eqe flse true flt inpt is itr lst 
+				no num pop prnt push rpt rtrn str
+			</Keywords>
+			<Keywords List="1" Inherit="False">
+				arry bool flt num str
+			</Keywords>
+		</Lexer>
+
+		<Snippets>
+
+			<Snippet Shortcut="run" IsSurroundsWith="True">
+				run() {
+					$DropMarker$
+				}
+			</Snippet>
+				
+			<Snippet Shortcut="rpt" IsSurroundsWith="True">
+				num $i$ : $0$; 
+				rpt is $i$ &lt; $max$ ?
+				{
+				$selected$$end$
+				$i$ : $i$ + 1;
+				}$DropMarker$
+			</Snippet>
+
+			<Snippet Shortcut="is" IsSurroundsWith="true">
+				is $end$ ? {
+			$DropMarker$$selected$
+				}
+			</Snippet>
+			
+			<Snippet Shortcut="isn" IsSurroundsWith="true">
+				is $expression$ ? {
+			$end$
+				} no {
+			$DropMarker$$selected$
+				}
+			</Snippet>
+			
+			<Snippet Shortcut="isnis" IsSurroundsWith="true">
+				is $selected$ ? {
+			
+				} no is $end$ {
+			$DropMarker$
+				}
+			</Snippet>
+			
+			<Snippet Shortcut="no" IsSurroundsWith="true">
+				no {
+			$DropMarker$$selected$
+				}
+			</Snippet>
+
+		</Snippets>
+	</Language>
+</ScintillaNET>

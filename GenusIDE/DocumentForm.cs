@@ -20,9 +20,12 @@ namespace GenusIDE {
 
         public DocumentForm() {
             InitializeComponent();
+            //scintilla.Lexing.Lexer = ScintillaNET.Lexer.Cpp;
             //scintilla.Lexing.LexerLanguageMap.Add("moe","moe");
-            //scintilla.ConfigurationManager.CustomLocation = System.IO.Path.GetFullPath("Resources/Configuration/moe.xml");
             
+            //scintilla.ConfigurationManager.CustomLocation = "Resources";
+            //scintilla.ConfigurationManager.Language = "moe";
+            //scintilla.ConfigurationManager.Configure();
 
         }
 
