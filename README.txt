@@ -17,7 +17,7 @@ Requires:
 	- 512 MB RAM (erm, recommended but it is .NET's requirements)
 	- 1GHz CPU (it runs on netbooks!)
 	
-By: Mark Jayson Fuentes <awkwardusername AT gmail.com>
+By: Mark Jayson Fuentes <markjayson.fuentes AT pup.edu.ph>
 	Paul Cedrick Artigo <paulartigo AT ymail.com>
 	Bernard Garcia <aicragdranreb AT yahoo.com>
 	Lorenz Yap
